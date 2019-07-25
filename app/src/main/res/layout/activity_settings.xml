@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Settings">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:background="@color/black"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/toolbar"
+        >
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/whiteback"
+            android:id="@+id/goback"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="Account Settings"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:paddingLeft="20dp"/>
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/namelayout"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Jonathan Grey"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:id="@+id/fullname"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="+233 274 400 614"
+            android:gravity="center"
+            android:id="@+id/userphonenumber"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.10dp"
+        android:background="@color/grey"
+        android:layout_marginTop="30dp"
+        android:id="@+id/view1"
+        app:layout_constraintTop_toBottomOf="@id/namelayout"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="30dp"
+        app:layout_constraintTop_toBottomOf="@id/view1">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Favorites"
+            android:textColor="@color/grey"
+            android:layout_marginLeft="20dp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="More Saved Places"
+            android:textColor="@color/blue"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="20dp"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.10dp"
+            android:background="@color/grey"
+            android:layout_marginTop="30dp"
+            android:id="@+id/view2"
+            app:layout_constraintTop_toBottomOf="@id/namelayout"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Privacy"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Manage the data you share with us"
+            android:textStyle="bold"
+            android:textColor="@color/grey"
+            android:layout_marginLeft="20dp"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.10dp"
+            android:background="@color/grey"
+            android:layout_marginTop="20dp"
+            android:id="@+id/view3"
+            app:layout_constraintTop_toBottomOf="@id/namelayout"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sign Out"
+            android:id="@+id/signout"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/black"
+            android:layout_marginLeft="20dp"
+            />
+
+
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

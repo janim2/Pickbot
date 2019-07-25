@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Numbercapture"
+    android:background="@android:color/white">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/back"
+            android:id="@+id/back"/>
+
+    </android.support.v7.widget.Toolbar>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Enter your mobile number"
+        android:layout_marginTop="70dp"
+        android:layout_marginLeft="20dp"
+        android:textSize="18sp"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:id="@+id/numberlayout"
+        android:layout_marginTop="125dp">
+
+       <com.hbb20.CountryCodePicker
+           android:layout_width="100dp"
+           android:layout_height="wrap_content"
+           android:id="@+id/codepicker"
+           app:ccp_textSize="17sp"
+           app:ccpDialog_keyboardAutoPopup="false"
+           app:ccp_defaultNameCode="Gh" >
+
+
+       </com.hbb20.CountryCodePicker>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="24 567 8900"
+            android:imeOptions="actionDone"
+            android:inputType="number"
+            android:focusedByDefault="true"
+            android:paddingLeft="10dp"
+            android:textSize="15sp"
+            android:id="@+id/mobilenumber"
+            android:maxLength="10"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Please enter your \nmobile number"
+        android:layout_marginTop="180dp"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="18dp"
+        android:id="@+id/error"
+        android:visibility="gone"
+        android:gravity="center"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Number less than neccessary"
+        android:layout_marginTop="180dp"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="18dp"
+        android:id="@+id/wronglength"
+        android:visibility="gone"
+        android:gravity="center"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="vertical"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="30dp"
+        android:id="@+id/moveforwardlayout"
+        >
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/forward"
+            android:layout_gravity="right"
+            android:layout_marginRight="20dp"
+            android:id="@+id/moveforward"
+            />
+
+
+
+    </LinearLayout>
+
+</FrameLayout>

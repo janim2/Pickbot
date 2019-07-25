@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".Map"
+    tools:showIn="@layout/app_bar_map"
+    android:background="@color/grey">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/blue">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:id="@+id/pickuppoint"
+            android:background="@android:color/white">
+
+            <ImageView
+                android:layout_width="10dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/dot"
+                android:layout_marginLeft="10dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="20dp"
+                android:text="Enter pickup point"
+                android:textSize="20sp"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="17sp"
+            android:textColor="@android:color/white"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:text="Your pickup point isn't showing\n up on the map. If you turn on your\n phone's location services, the app will find a point for you."
+            android:layout_marginTop="20dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.01dp"
+            android:background="@android:color/white"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:orientation="horizontal"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            android:id="@+id/locationturner"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="Turn on location services"
+                android:textColor="@android:color/white"
+                android:layout_marginLeft="20dp"
+                android:textSize="17sp"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                />
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:src="@drawable/white_arrow"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
